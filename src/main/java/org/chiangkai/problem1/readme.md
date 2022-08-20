@@ -36,6 +36,8 @@
 ## 解决方案
 
 1. 暴力解法
+时间复杂读 O(N^2)
+空间复杂度 O(1)
 ```java
 public class Solution {
 
@@ -56,4 +58,48 @@ public class Solution {
 }
 ```
 
-2. 
+2. 哈希表 
+
+空间复杂都O(N)
+时间复杂度O(N)
+- 双循环方案
+```java
+public class Solution {
+    // 存在bug1 等值问题 eg: nums: [3,2,4] target:6 此答案输出 [0,0] 预期答案 [1,2]
+    public int[] twoSum(int[] nums, int target) {
+
+        Map<Integer, Integer> map = new HashMap<>();
+        // key nums中的每个值对应的补数，value 对应的下表
+        for (int i = 0; i < nums.length; i++) {
+            map.put(target - nums[i], i);
+        }
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(nums[i])) {
+                // 解决 bug1 添加等值判断
+                if(i == map.get(nums[i])){
+                    continue;
+                }
+                return new int[]{i, map.get(nums[i])};
+            }
+        }
+        return new int[0];
+    }
+}
+```
+- 单循环方案
+```java
+public class Solution {
+
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(nums[i])) {
+                return new int[]{map.get(nums[i]), i};
+            }
+            map.put(target - nums[i], i);
+        }
+        return new int[0];
+    }
+}
+
+```

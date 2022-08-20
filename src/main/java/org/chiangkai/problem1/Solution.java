@@ -1,6 +1,7 @@
 package org.chiangkai.problem1;
 
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author ChiangKai
@@ -8,18 +9,22 @@ import java.util.Arrays;
  */
 public class Solution {
 
+    // 存在bug 双向收敛  eg{3,2,4} 6
     public int[] twoSum(int[] nums, int target) {
-        int[] result = new int[2];
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = nums.length - 1; j > i; j--) {
-                if (nums[i] + nums[j] == target) {
-                    result[0] = i;
-                    result[1] = j;
-                    break;
-                }
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0, j = nums.length - 1; i < j; i++, j--) {
+            if (nums[i] + nums[j] == target) {
+                return new int[]{i, j};
             }
+            if (map.containsKey(target - nums[i])) {
+                return new int[]{map.get(target - nums[i]), i};
+            }
+            if (map.containsKey(target - nums[j])) {
+                return new int[]{map.get(target - nums[j]), j};
+            }
+            map.put(nums[i], i);
+            map.put(nums[j], j);
         }
-
-        return result;
+        return new int[0];
     }
 }
