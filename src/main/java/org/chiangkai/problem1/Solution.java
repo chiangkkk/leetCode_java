@@ -9,10 +9,11 @@ import java.util.Map;
  */
 public class Solution {
 
-    // 存在bug 双向收敛  eg{3,2,4} 6
+    // 双向收敛
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0, j = nums.length - 1; i < j; i++, j--) {
+        // i <= j 解决用例 eg{3,2,4} 6
+        for (int i = 0, j = nums.length - 1; i <= j; i++, j--) {
             if (nums[i] + nums[j] == target) {
                 return new int[]{i, j};
             }

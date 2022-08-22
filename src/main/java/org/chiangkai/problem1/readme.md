@@ -103,3 +103,28 @@ public class Solution {
 }
 
 ```
+- 双向收敛方案 
+用时 0ms :satisfied:
+```java
+public class Solution {
+    //  双向收敛  
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0, j = nums.length - 1; i <= j; i++, j--) {
+            if (nums[i] + nums[j] == target) {
+                return new int[]{i, j};
+            }
+            if (map.containsKey(target - nums[i])) {
+                return new int[]{map.get(target - nums[i]), i};
+            }
+            if (map.containsKey(target - nums[j])) {
+                return new int[]{map.get(target - nums[j]), j};
+            }
+            map.put(nums[i], i);
+            map.put(nums[j], j);
+        }
+        return new int[0];
+    }
+}
+
+```
