@@ -19,15 +19,13 @@ package org.chiangkai.problem2;
  * @date 2022/8/22 23:21
  */
 class Solution {
-    //存在 bug 没通过用例
-    // [9,9,9,9,9,9,9]
-    //[9,9,9,9]
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
         ListNode head = new ListNode(), temp = null;
         int addTemp = 0;
         boolean initFlag = true;
-        while (l1 != null || l2 != null) {
+        //addTemp==1 解决进位为1 l1 和 l2 都为null的场景
+        while (l1 != null || l2 != null || addTemp == 1) {
             int n1 = l1 != null ? l1.val : 0;
             int n2 = l2 != null ? l2.val : 0;
             if (initFlag) {
@@ -57,5 +55,40 @@ class Solution {
             l2 = l2 != null ? l2.next : null;
         }
         return head;
+    }
+
+    public ListNode arrayToListNode(int[] arr) {
+        ListNode head = null, temp = null;
+        for (int i = 0; i < arr.length; i++) {
+            if (head == null) {
+                head = new ListNode();
+                head.val = arr[i];
+                temp = head;
+            } else {
+                ListNode newNode = new ListNode();
+                newNode.val = arr[i];
+                temp.next = newNode;
+                temp = newNode;
+            }
+        }
+        return head;
+    }
+
+    public void printListNode(ListNode listNode) {
+        System.out.print("[");
+        StringBuilder sb = new StringBuilder();
+        while (null != listNode) {
+            int val = listNode.val;
+            System.out.print(val);
+            sb.append(val);
+            listNode = listNode.next;
+            if (null != listNode) {
+                System.out.print(",");
+            }
+        }
+        System.out.print("]");
+        System.out.println();
+        System.out.println(sb.reverse().toString());
+
     }
 }
