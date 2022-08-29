@@ -9,7 +9,11 @@ class SolutionTest {
     @Test
     public void testProblem3(){
         Solution solution = new Solution();
-        int len= solution.lengthOfLongestSubstring("pwwkew");
+        int len= solution.solution2("abcabcbb");
         System.out.println(len);
+    }
+    @Test
+    public void t2(){
+
     }
 }

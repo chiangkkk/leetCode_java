@@ -29,4 +29,27 @@ class Solution {
         }
         return maxStrlen;
     }
+
+    public int solution2(String s) {
+        int maxStrlen = 0;
+        int strLen = s.length();
+
+        if (s.length() > 1) {
+            if (s.length() == 1) {
+                return 1;
+            }
+            int[] str = new int[128];
+
+            int start = 0;
+            for (int i = 0; i < strLen; i++) {
+                int index = s.charAt(i);
+                //?? 问什么与start 比较
+                start = Math.max(start, str[index]);
+                maxStrlen = Math.max(maxStrlen, i - start +1);
+                str[s.charAt(i)] = i +1;
+            }
+            return maxStrlen;
+        }
+        return strLen;
+    }
 }
