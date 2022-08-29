@@ -9,7 +9,7 @@ class SolutionTest {
     @Test
     public void testProblem3(){
         Solution solution = new Solution();
-        int len= solution.solution2("abcabcbb");
+        int len= solution.solution2("pwwkew");
         System.out.println(len);
     }
     @Test
