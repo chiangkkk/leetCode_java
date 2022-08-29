@@ -43,7 +43,7 @@ class Solution {
             int start = 0;
             for (int i = 0; i < strLen; i++) {
                 int index = s.charAt(i);
-                //?? 问什么与start 比较
+                
                 start = Math.max(start, str[index]);
                 maxStrlen = Math.max(maxStrlen, i - start +1);
                 str[s.charAt(i)] = i +1;
