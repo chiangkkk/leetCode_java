@@ -5,6 +5,7 @@ package org.chiangkai.problem4;
  * @date 2022/8/29 21:44
  */
 class Solution {
+    //TODO 没啥思路
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int num1 = nums1.length;
         int num2 = nums2.length;
