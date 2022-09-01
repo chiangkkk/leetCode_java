@@ -27,3 +27,49 @@
 
 - `1 <= s.length <= 1000`
 - `s` 仅由数字和英文字母组成
+
+## 解题
+
+#### 中心扩散法则
+- 优化了相同字符串的处理
+- 在全是相同字符下时间复杂度O(n) 最坏依然是O(n<sup>2</sup>)
+```java
+public class Solution {
+    public String longestPalindrome(String s) {
+        if (s == null || s.length() == 0) {
+            return "";
+        }
+        if (s.length() == 1) {
+            return s;
+        }
+        char[] str = s.toCharArray();
+        // record[0] 起始位置 record[1] 结束位置
+        int[] record = new int[2];
+        for (int i = 0; i < str.length; i++) {
+            i = findLongestParlindrome(str, record, i);
+        }
+        return s.substring(record[0], record[1] + 1);
+    }
+
+    private int findLongestParlindrome(char[] str, int[] record, int low) {
+        int high = low;
+        while (high < str.length - 1 && str[high + 1] == str[low]) {
+            high++;
+        }
+        int ans = high;
+        while (low > 0 && high < str.length - 1 && str[low - 1] == str[high + 1]) {
+            low--;
+            high++;
+        }
+        if (record[1] - record[0] < high - low) {
+            record[0] = low;
+            record[1] = high;
+        }
+        return ans;
+    }
+
+
+}
+
+
+```
