@@ -33,3 +33,31 @@
 输入：l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
 输出：[8,9,9,9,0,0,0,1]
 ```
+
+
+## 解题
+
+- 动态规划
+
+```java
+class Solution {
+    public int countSubstrings(String s) {
+        boolean dp[][] = new boolean[s.length()][s.length()];
+        int count = 0;
+        for (int i = s.length() - 1; i >= 0; i--) {
+            for (int j = i; j < s.length(); j++) {
+                if (s.charAt(i) == s.charAt(j)) {
+                    if (j - i <= 1) {
+                        dp[i][j] = true;
+                        count++;
+                    } else if (dp[i + 1][j - 1]) {
+                        dp[i][j] = true;
+                        count++;
+                    }
+                }
+            }
+        }
+        return count;
+    }
+}
+```
