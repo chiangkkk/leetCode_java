@@ -5,22 +5,27 @@ package org.chiangkai.problem647;
  * @date 2022/8/31 23:29
  */
 class Solution {
+    int num = 0;
+
     public int countSubstrings(String s) {
-        boolean dp[][] = new boolean[s.length()][s.length()];
-        int count = 0;
-        for (int i = s.length() - 1; i >= 0; i--) {
-            for (int j = i; j < s.length(); j++) {
-                if (s.charAt(i) == s.charAt(j)) {
-                    if (j - i <= 1) {
-                        dp[i][j] = true;
-                        count++;
-                    } else if (dp[i + 1][j - 1]) {
-                        dp[i][j] = true;
-                        count++;
-                    }
-                }
-            }
+        if (s == null || s.length() == 0) {
+            return 0;
         }
-        return count;
+        if (s.length() == 1) {
+            return 1;
+        }
+        for (int i = 0; i < s.length(); i++) {
+            find(s, i, i);
+            find(s, i, i + 1);
+        }
+        return num;
+    }
+
+    public void find(String s, int start, int end) {
+        while (start > 0 && end < s.length() && s.charAt(start) == s.charAt(end)) {
+            num++;
+            start--;
+            end++;
+        }
     }
 }
