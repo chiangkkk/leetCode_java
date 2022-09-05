@@ -86,7 +86,6 @@ public class Solution {
             } else {
                 addNum = i * 2;
             }
-            System.out.println(addNum);
             for (int j = i; j < s.length(); j = j + addNum) {
                 sb.append(s.charAt(j));
                 if (addNum != totalGap) {
