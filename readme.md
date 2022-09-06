@@ -6,6 +6,6 @@
 4. [寻找两个正序数组的中位数](/src/main/java/org/chiangkai/problem4)
 5. [最长回文子串](/src/main/java/org/chiangkai/problem5)
 6. [ Z 字形变换](/src/main/java/org/chiangkai/problem6)
-
+7. [整数反转](/src/main/java/org/chiangkai/problem7)
 --------------
 647. [回文子串](/src/main/java/org/chiangkai/problem647)
