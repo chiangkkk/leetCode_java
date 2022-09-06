@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?> 
  <trees>
      <tree path="/src/main/java/org/chiangkai/problem7" title="整数反转"/>
+     <tree path="/src/main/java/org/chiangkai/problem8" title="字符串转换整数"/>
  </trees>
