@@ -2,4 +2,6 @@
  <trees>
      <tree path="/src/main/java/org/chiangkai/problem7" title="整数反转"/>
      <tree path="/src/main/java/org/chiangkai/problem8" title="字符串转换整数"/>
+     <tree path="/src/main/java/org/chiangkai/problem9" title="回文数"/>
+     <tree path="/src/main/java/org/chiangkai/problem10" title="正则表达式匹配"/>
  </trees>
