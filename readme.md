@@ -12,6 +12,7 @@
 10. [正则表达式匹配](/src/main/java/org/chiangkai/problem10)
 --------------
 647. [回文子串](/src/main/java/org/chiangkai/problem647)
-
+-------
+667. [ 优美的排列 II](/src/main/java/org/chiangkai/problem667)
 ------
 1592. [重新排列单词间的空格](/src/main/java/org/chiangkai/problem1592)
