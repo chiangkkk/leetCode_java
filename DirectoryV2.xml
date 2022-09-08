@@ -6,5 +6,12 @@
      <tree path="/src/main/java/org/chiangkai/problem10" title="正则表达式匹配"/>
     <tree path="/src/main/java/org/chiangkai/problem647" title="回文子串"/>
     <tree path="/src/main/java/org/chiangkai/problem1592" title="重新排列单词间的空格"/>
+     <tree path="/src/main/java/org/chiangkai/problem667" title="优美的排列 II"/>
+     <tree path="/src/main/java/org/chiangkai/problem1" title="两数之和"/>
+     <tree path="/src/main/java/org/chiangkai/problem2" title="两数相加"/>
+     <tree path="/src/main/java/org/chiangkai/problem3" title="无重复字符的最长子串"/>
+     <tree path="/src/main/java/org/chiangkai/problem4" title="寻找两个正序数组的中位数"/>
+    <tree path="/src/main/java/org/chiangkai/problem5" title="最长回文子串"/>
+    <tree path="/src/main/java/org/chiangkai/problem6" title="Z 字形变换"/>
 
- </trees>
+</trees>
