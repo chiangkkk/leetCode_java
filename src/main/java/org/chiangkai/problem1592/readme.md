@@ -62,7 +62,7 @@
 3. 计算每个word见的空格数量，spaceCount / (wordCount - 1), wordCount可能为1, 需要条件判断
 4. stingBuilder拼接返回
 
-ps: 感觉没写啥，结果一看也写了几十行😂，我跑的用时1ms
+ps: 感觉没写啥，结果一看也写了几十行😂
 ### 代码附上
 ```java
 public class Solution {
