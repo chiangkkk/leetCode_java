@@ -13,5 +13,7 @@
      <tree path="/src/main/java/org/chiangkai/problem4" title="寻找两个正序数组的中位数"/>
     <tree path="/src/main/java/org/chiangkai/problem5" title="最长回文子串"/>
     <tree path="/src/main/java/org/chiangkai/problem6" title="Z 字形变换"/>
+    <tree path="/src/main/java/org/chiangkai/problem669" title="修剪二叉搜索树"/>
+    <tree path="/src/main/java/org/chiangkai/problem1598" title="文件夹操作日志搜索器"/>
 
 </trees>
