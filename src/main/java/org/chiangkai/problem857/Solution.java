@@ -1,6 +1,7 @@
 package org.chiangkai.problem857;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -11,14 +12,11 @@ public class Solution {
     public double mincostToHireWorkers(int[] quality, int[] wage, int k) {
         double res = Double.MAX_VALUE;
         double date[][] = new double[quality.length][2];
-        double workers[][] = new double[quality.length][2];
         for (int i = 0; i < quality.length; i++) {
             date[i][0] = (wage[i] + 0.0) / quality[i];
             date[i][1] = quality[i];
-            workers[i] = new double[] {(double) wage[i] / quality[i], (double) quality[i]};
         }
-        Arrays.sort(date, (x, y) -> Double.compare(x[0], y[0]));
-
+        Arrays.sort(date, Comparator.comparingDouble(x -> x[0]));
         PriorityQueue<Double> query = new PriorityQueue<>((x, y) -> Double.compare(y, x));
         double sum = 0;
         for (double[] work : date) {
