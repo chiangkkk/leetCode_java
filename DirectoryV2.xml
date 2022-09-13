@@ -15,5 +15,8 @@
     <tree path="/src/main/java/org/chiangkai/problem6" title="Z 字形变换"/>
     <tree path="/src/main/java/org/chiangkai/problem669" title="修剪二叉搜索树"/>
     <tree path="/src/main/java/org/chiangkai/problem1598" title="文件夹操作日志搜索器"/>
+    <tree path="/src/main/java/org/chiangkai/problem670" title="最大交换"/>
+    <tree path="/src/main/java/org/chiangkai/problem857" title="雇佣 K 名工人的最低成本"/>
+    <tree path="/src/main/java/org/chiangkai/problem1608" title="特殊数组的特征值"/>
 
 </trees>

@@ -15,4 +15,14 @@
 -------
 667. [ 优美的排列 II](/src/main/java/org/chiangkai/problem667)
 ------
+669. [修剪二叉搜索树](/src/main/java/org/chiangkai/problem669)
+670. [最大交换](/src/main/java/org/chiangkai/problem670)
+-----
+857. [雇佣K名工人最低成本](/src/main/java/org/chiangkai/problem857)
+-----
 1592. [重新排列单词间的空格](/src/main/java/org/chiangkai/problem1592)
+
+-----
+1598.  [ 雇佣 K 名工人的最低成本](/src/main/java/org/chiangkai/problem1598)
+1599. [1599-undo](/src/main/java/org/chiangkai/problem1599)
+1600.  [特殊数组的特征值](/src/main/java/org/chiangkai/problem1560)
