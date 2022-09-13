@@ -1,36 +1,35 @@
 package org.chiangkai.problem670;
 
+import java.util.HashMap;
+
 /**
  * @author ChiangKai
  * @date 2022/9/13 8:40
  */
 class Solution {
-
     public int maximumSwap(int num) {
-        char[] charArray = String.valueOf(num).toCharArray();
-        int len = charArray.length;
-        int idx1 = -1, idx2 = -1, maxId = len - 1;
-        for (int i = maxId - 1; i >= 0; i--) {
-            if (charArray[i] > charArray[maxId]) {
-                maxId = i;
-            } else if (charArray[i] < charArray[maxId]) {
-                idx1 = maxId;
-                idx2 = i;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        char[] chars = (num + "").toCharArray();
+        for (int i = chars.length - 1; i >= 0; i--) {
+            if (!map.containsKey((int) chars[i])) {
+                map.put((int) chars[i], i);
             }
         }
-        if (idx1 >= 0) {
-            swap(charArray, idx1, idx2);
-            return Integer.parseInt(new String(charArray));
+        flag:
+        for (int i = 0; i < chars.length - 1; i++) {
+            for (int j = '9'; j > chars[i]; j--) {
+                if (map.containsKey(j) && map.get(j) > i) {
+                    swap(chars, i, map.get(j));
+                    break flag;
+                }
+            }
         }
-
-        return num;
+        return Integer.parseInt(new String(chars));
     }
 
-    public void swap(char[] charArray, int i, int j) {
-        char temp = charArray[i];
-        charArray[i] = charArray[j];
-        charArray[j] = temp;
+    private void swap(char[] chars, int i, int j) {
+        char temp = chars[i];
+        chars[i] = chars[j];
+        chars[j] = temp;
     }
-
-
 }

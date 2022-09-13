@@ -31,30 +31,21 @@ class Solution {
     public int maximumSwap(int num) {
         HashMap<Integer, Integer> map = new HashMap<>();
         char[] chars = (num + "").toCharArray();
-        int posion = chars.length - 1;
-        while (num != 0) {
-            int remained = num % 10;
-            if (!map.containsKey(remained)) {
-                map.put(remained, posion);
+        for (int i = chars.length - 1; i >= 0; i--) {
+            if (!map.containsKey((int) chars[i])) {
+                map.put((int) chars[i], i);
             }
-            posion--;
-            num /= 10;
         }
         flag:
         for (int i = 0; i < chars.length - 1; i++) {
-            int nowNum = Character.getNumericValue(chars[i]);
-            for (int j = 9; j > nowNum; j--) {
+            for (int j = '9'; j > chars[i]; j--) {
                 if (map.containsKey(j) && map.get(j) > i) {
                     swap(chars, i, map.get(j));
                     break flag;
                 }
             }
         }
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < chars.length; i++) {
-            sb.append(chars[i]);
-        }
-        return Integer.parseInt(sb.toString());
+        return Integer.parseInt(new String(chars));
     }
 
     private void swap(char[] chars, int i, int j) {
