@@ -25,4 +25,7 @@
 -----
 1598.  [ 雇佣 K 名工人的最低成本](/src/main/java/org/chiangkai/problem1598)
 1599. [1599-undo](/src/main/java/org/chiangkai/problem1599)
-1600.  [特殊数组的特征值](/src/main/java/org/chiangkai/problem1560)
+--------
+1608. [特殊数组的特征值](/src/main/java/org/chiangkai/problem1608)
+---------
+1619. [删除某些元素后的数组均值](/src/main/java/org/chiangkai/problem1619)

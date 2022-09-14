@@ -18,5 +18,6 @@
     <tree path="/src/main/java/org/chiangkai/problem670" title="最大交换"/>
     <tree path="/src/main/java/org/chiangkai/problem857" title="雇佣 K 名工人的最低成本"/>
     <tree path="/src/main/java/org/chiangkai/problem1608" title="特殊数组的特征值"/>
+    <tree path="/src/main/java/org/chiangkai/problem1619" title="删除某些元素后的数组均值"/>
 
 </trees>
