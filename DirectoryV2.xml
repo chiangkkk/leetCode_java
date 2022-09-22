@@ -20,5 +20,6 @@
     <tree path="/src/main/java/org/chiangkai/problem1608" title="特殊数组的特征值"/>
     <tree path="/src/main/java/org/chiangkai/problem1619" title="删除某些元素后的数组均值"/>
     <tree path="/src/main/java/org/chiangkai/problem672" title="灯泡开关"/>
+    <tree path="/src/main/java/org/chiangkai/problem1640" title="能否连成数组"/>
 
 </trees>
