@@ -22,5 +22,7 @@
     <tree path="/src/main/java/org/chiangkai/problem672" title="灯泡开关"/>
     <tree path="/src/main/java/org/chiangkai/problem1640" title="能否连成数组"/>
     <tree path="/src/main/java/org/chiangkai/problem1652" title="拆炸弹"/>
+    <tree path="/src/main/java/org/chiangkai/face/problem01_02" title="判定是否互为字符重排"/>
+    <tree path="/src/main/java/org/chiangkai/face/problem17_09" title="第K个数"/>
 
 </trees>
