@@ -24,5 +24,6 @@
     <tree path="/src/main/java/org/chiangkai/problem1652" title="拆炸弹"/>
     <tree path="/src/main/java/org/chiangkai/face/problem01_02" title="判定是否互为字符重排"/>
     <tree path="/src/main/java/org/chiangkai/face/problem17_09" title="第K个数"/>
+    <tree path="/src/main/java/org/chiangkai/face/problem01_09" title="字符串轮转"/>
 
 </trees>
