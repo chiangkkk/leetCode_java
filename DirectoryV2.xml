@@ -26,5 +26,7 @@
     <tree path="/src/main/java/org/chiangkai/face/problem17_09" title="第K个数"/>
     <tree path="/src/main/java/org/chiangkai/face/problem01_09" title="字符串轮转"/>
     <tree path="/src/main/java/org/chiangkai/problem1694" title="重新格式化电话号码"/>
+    <tree path="/src/main/java/org/chiangkai/problem83" title="删除排序链表中的重复元素"/>
+    <tree path="/src/main/java/org/chiangkai/problem100" title="相同的树"/>
 
 </trees>
