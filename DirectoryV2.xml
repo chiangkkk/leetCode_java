@@ -28,5 +28,8 @@
     <tree path="/src/main/java/org/chiangkai/problem1694" title="重新格式化电话号码"/>
     <tree path="/src/main/java/org/chiangkai/problem83" title="删除排序链表中的重复元素"/>
     <tree path="/src/main/java/org/chiangkai/problem100" title="相同的树"/>
+    <tree path="/src/main/java/org/chiangkai/problem231" title="2 的幂"/>
+    <tree path="/src/main/java/org/chiangkai/problem349" title="数组交集"/>
+    <tree path="/src/main/java/org/chiangkai/problem344" title="反转数组"/>
 
 </trees>
